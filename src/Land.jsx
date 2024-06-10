@@ -39,7 +39,7 @@ function Land() {
                             <a href="https://github.com/sahiee-dev" target="_blank" rel="noopener noreferrer">
                                 <button><FontAwesomeIcon icon={['fab', 'github']} /></button>
                             </a>
-                            <a href="https://linkedin.com/in/shaikahamedsahir" target="_blank" rel="noopener noreferrer">
+                            <a href="https://www.linkedin.com/in/shaik-ahamed-sahir-672562253/" target="_blank" rel="noopener noreferrer">
                                 <button><FontAwesomeIcon icon={['fab', 'linkedin']} /></button>
                             </a>
                             </div>
