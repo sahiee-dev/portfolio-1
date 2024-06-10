@@ -151,7 +151,7 @@ function Land() {
                             <div className='skills'>
                                 <button>REST API</button><button>Axios</button><button>React</button><button>Geolocation API</button>
                             </div>
-                            <a href="https://github.com/sahiee-dev/tempzen" target='_blank'><FontAwesomeIcon icon="fa-brands fa-github" />GitHub</a>
+                            <a href="https://github.com/sahiee-dev/TempTrack" target='_blank'><FontAwesomeIcon icon="fa-brands fa-github" />GitHub</a>
                         </div>
                     </div>
                     <br />
