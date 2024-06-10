@@ -258,7 +258,11 @@ section#about {
     font-size: 130px;
     font-weight: 900;
     text-align: center;
-    font-family: 'Zen Dots';
+    background: linear-gradient(90deg, #fff, #b97be5, #cd18fa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .tech .fa-icon{
     font-size: 70px;
