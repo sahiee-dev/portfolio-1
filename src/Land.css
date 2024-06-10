@@ -254,6 +254,14 @@ section#about {
     width: 100%;
     margin-top: 100px;
 }
+.tech h1{
+    font-size: 130px;
+    background: linear-gradient(90deg, #fff, #b97be5, #cd18fa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 .tech .tech-title{
     font-size: 130px;
     font-weight: 900;
