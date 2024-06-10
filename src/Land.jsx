@@ -168,7 +168,7 @@ function Land() {
                         <div className="right-contact" data-aos="fade-right">
                             <a href="mailto:sahir150305@gmail.com"><FontAwesomeIcon icon="fa-solid fa-envelope" /> sahir150305@gmail.com</a>
                             <br />
-                            <a href=""><FontAwesomeIcon icon="fa-brands fa-linkedin" /> Shaik ahamed Sahir</a>
+                            <a href="https://www.linkedin.com/in/shaik-ahamed-sahir-672562253/"><FontAwesomeIcon icon="fa-brands fa-linkedin" /> Shaik ahamed Sahir</a>
                             <br />
                             <a href="callto:8977637897"><FontAwesomeIcon icon="fa-solid fa-phone" /> 8977637897</a>
 
