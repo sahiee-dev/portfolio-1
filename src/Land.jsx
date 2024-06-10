@@ -36,7 +36,7 @@ function Land() {
 
                     <div className="icons" >
                             <div className="left-side-icons">
-                            <a href="https://github.com/your-profile" target="_blank" rel="noopener noreferrer">
+                            <a href="https://github.com/sahiee-dev" target="_blank" rel="noopener noreferrer">
                                 <button><FontAwesomeIcon icon={['fab', 'github']} /></button>
                             </a>
                             <a href="https://linkedin.com/in/shaikahamedsahir" target="_blank" rel="noopener noreferrer">
