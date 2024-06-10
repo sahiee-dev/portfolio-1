@@ -1,0 +1,425 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    background: black;
+    color: whitesmoke;
+    scroll-behavior: smooth;
+    font-family: -apple-system;
+}
+html{
+    margin: 0;
+    padding: 0;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 10vh;
+    box-shadow: 0 0 10px 0.01px #e4e4e4;
+    z-index: 2;
+}
+hr{
+    box-sizing: 0 0 10px 0.01px #e4e4e4;
+}
+ul {
+    display: flex;
+    align-items: center;
+}
+ul button{
+    display: none;
+}
+
+ul a {
+    text-decoration: none;
+}
+
+li {
+    margin: 20px;
+    list-style: none;
+}
+
+.left-side-icons {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    transform: translateY(-50%);
+    z-index: 2;
+    border-radius: 50%;
+}
+
+.right-side-icons {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+.icons button {
+    padding: 14px;
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.icons button:hover {
+    font-size: 30px;
+}
+
+.container {
+    margin-top: 10vh;
+    height: 90vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+h1 {
+    font-size: 100px;
+    font-weight: bolder;
+    letter-spacing: 3px;
+}
+
+h1 span {
+    background: linear-gradient(90deg, #fff, #b97be5, #cd18fa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+p {
+    font-size: 18px;
+}
+
+.web-code-btn {
+    padding: 15px 9px;
+    background: white;
+    color: black;
+    font-size: large;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.small-txt {
+    font-size: 12px;
+    color: grey;
+}
+
+.img-container {
+    border: 0.1px solid rgba(255, 255, 255, 0.244);
+}
+
+.image {
+    height: 300px;
+    transition: 0.5s;
+}
+
+.image:hover {
+    box-shadow: 0 0 10px 1px #fff;
+}
+
+.heading {
+    text-align: center;
+    font-size: 80px;
+    letter-spacing: normal;
+}
+
+.project-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+}
+
+.cont-single {
+    width: 70%;
+    height: fit-content;
+    border: 0.1px solid rgb(190, 190, 190);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 0 30px 0.01px #b2b2b2;
+    padding: 15px;
+    margin-bottom: 40px;
+    transition: 0.5s;
+}
+.cont-single h1 {
+    font-size: 60px;
+}
+
+.cont-single a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.project-img {
+    aspect-ratio: 4 / 3;
+    width: 40%;
+    border-radius: 14px;
+    transition: 0.6s;
+}
+.project-img:hover{
+    scale: 1.1;
+}
+
+.skills button {
+    background-color: white;
+    color: black;
+    padding: 6px 15px;
+    border: none;
+    margin: 5px;
+    border-radius: 4px;
+}
+
+/* Updated About Section Styles */
+section#about {
+    padding: 50px 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.slide-left, .slide-right {
+    height: 400px;
+    width: fit-content;
+    margin: 20px 0;
+}
+.visible{
+    display: flex;
+}
+.hidden{
+    display: none;
+}
+.slide-left {
+    align-self: flex-start; /* Align to the left */
+    background: linear-gradient(to right, #fff, #bcbcbc, #6d6d6d, #1b1b1b, #000000);
+    padding: 20px; /* Add padding for spacing */
+    box-sizing: border-box; /* Include padding in element's total width and height */
+    overflow: hidden; /* Hide any overflowing content */
+    color: white; /* Set text color for better contrast */
+}
+
+.slide-right {
+    align-self: flex-end; /* Align to the right */
+    background: linear-gradient(to left, #fff, #8f8f8f, #555555, #1b1b1b, #000000);
+    padding: 20px; /* Add padding for spacing */
+    box-sizing: border-box; /* Include padding in element's total width and height */
+    overflow: hidden; /* Hide any overflowing content */
+    color: white; /* Set text color for better contrast */
+}
+
+.slide-left h2,
+.slide-left p,
+.slide-right h2,
+.slide-right p {
+    background: none; /* Remove background for text elements */
+}
+.slide-left h2{
+    font-size: 287px;
+    background: linear-gradient(to left, #fff, #8f8f8f, #555555, #1b1b1b, #000000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.slide-right h2{
+    font-size: 287px;
+    background: linear-gradient(to right, #fff, #8f8f8f, #555555, #1b1b1b, #000000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+.tech{
+    width: 100%;
+    margin-top: 100px;
+}
+.tech .tech-title{
+    font-size: 130px;
+    font-weight: 900;
+    text-align: center;
+    font-family: 'Zen Dots';
+}
+.tech .fa-icon{
+    font-size: 70px;
+    margin: 30px;
+}
+.contact{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 70vh;
+}
+#contact h1{
+    text-align: center;
+    
+}
+
+.left-contact, .right-contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding: 30px;
+}
+.left-contact p, .right-contact p {
+    background: none; 
+    color: #fff;
+}
+.left-contact a, .right-contact a {
+    background: none; 
+    color: #fff;
+}
+#contact p{
+    text-align: center;
+    margin: 10px;
+}
+
+@media (max-width: 768px) {
+    html{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    nav {
+        flex-direction: column;
+        height: auto;
+    }
+    ul {
+        flex-direction: column;
+    }
+    li {
+        margin: 10px 0;
+        
+    }
+    .visible{
+        display: flex;
+    }
+    .container {
+        flex-direction: column;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+    }
+    h1 span{
+        font-size: 120px;
+    }
+    .left-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .left-container p{
+        text-align: center;
+    }
+    .left-side-icons, .right-side-icons {
+        display: none;
+    }
+    .left-side-icons {
+        left: 0;
+    }
+    .right-side-icons {
+        right: 0;
+    }
+    .cont-single {
+        width: 80%;
+    }
+    .cont-single h1{
+        font-size: 40px;
+    }
+    .project-img {
+        width: 80%;
+    }
+    .slide-left, .slide-right {
+        max-width: 100%;
+        height: 90px;
+    }
+    .slide-left h2, .slide-right h2{
+        font-size: 40px;
+    }
+    .tech .fa-icon{
+        font-size: 50px;
+        margin: 30px;
+    }
+    #contact{
+        margin-top: 150px;
+    }
+
+}
+
+/* Phones */
+@media (max-width: 480px) {
+    html{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    nav {
+        flex-direction: column;
+        height: auto;
+    }
+    ul {
+        flex-direction: column;
+    }
+    li {
+        margin: 10px 0;
+        display: none;
+    }
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+    h1 {
+        font-size: 40px;
+    }
+    .left-side-icons, .right-side-icons {
+        top: auto;
+        bottom: 0;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+        transform: none;
+    }
+    .left-side-icons {
+        left: 0;
+    }
+    .right-side-icons {
+        right: 0;
+    }
+    .cont-single {
+        width: 80%;
+    }
+    .cont-single h1{
+        font-size: 40px;
+    }
+    .project-img {
+        width: 100%;
+    }
+    .slide-left, .slide-right {
+        width: 100%;
+    }
+}
