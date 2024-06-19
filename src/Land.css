@@ -218,15 +218,17 @@ section#about {
     box-sizing: border-box; /* Include padding in element's total width and height */
     overflow: hidden; /* Hide any overflowing content */
     color: white; /* Set text color for better contrast */
+    overflow: hidden;
 }
 
 .slide-right {
     align-self: flex-end; /* Align to the right */
     background: linear-gradient(to left, #fff, #8f8f8f, #555555, #1b1b1b, #000000);
-    padding: 20px; /* Add padding for spacing */
+    padding: 20px 0px; /* Add padding for spacing */
     box-sizing: border-box; /* Include padding in element's total width and height */
     overflow: hidden; /* Hide any overflowing content */
     color: white; /* Set text color for better contrast */
+    overflow: hidden;
 }
 
 .slide-left h2,
