@@ -1,19 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap");
 * {
     margin: 0;
     padding: 0;
-    width: 100vw;
     background: black;
     color: whitesmoke;
     scroll-behavior: smooth;
-    font-family: Montserrat;
-    font-weight: 200;
+    font-family: -apple-system;
 }
 html{
     margin: 0;
     padding: 0;
-    width: 100vw;
 }
 nav {
     display: flex;
@@ -88,7 +85,7 @@ li {
 
 h1 {
     font-size: 100px;
-    font-weight: 900;
+    font-weight: bolder;
     letter-spacing: 3px;
 }
 
@@ -98,7 +95,6 @@ h1 span {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-weight: 900;
 }
 
 p {
@@ -220,17 +216,15 @@ section#about {
     box-sizing: border-box; /* Include padding in element's total width and height */
     overflow: hidden; /* Hide any overflowing content */
     color: white; /* Set text color for better contrast */
-    overflow: hidden;
 }
 
 .slide-right {
     align-self: flex-end; /* Align to the right */
     background: linear-gradient(to left, #fff, #8f8f8f, #555555, #1b1b1b, #000000);
-    padding: 20px 0px; /* Add padding for spacing */
+    padding: 20px; /* Add padding for spacing */
     box-sizing: border-box; /* Include padding in element's total width and height */
     overflow: hidden; /* Hide any overflowing content */
     color: white; /* Set text color for better contrast */
-    overflow: hidden;
 }
 
 .slide-left h2,
@@ -248,7 +242,7 @@ section#about {
     -webkit-text-fill-color: transparent;
 }
 .slide-right h2{
-    font-size: 267px;
+    font-size: 287px;
     background: linear-gradient(to right, #fff, #8f8f8f, #555555, #1b1b1b, #000000);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -260,13 +254,11 @@ section#about {
     width: 100%;
     margin-top: 100px;
 }
-.tech h1{
-    font-size: 130px;
-}
 .tech .tech-title{
     font-size: 130px;
     font-weight: 900;
     text-align: center;
+    font-family: 'Zen Dots';
 }
 .tech .fa-icon{
     font-size: 70px;
