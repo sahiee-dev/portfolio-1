@@ -6,7 +6,7 @@
     background: black;
     color: whitesmoke;
     scroll-behavior: smooth;
-    font-family: montserrat;
+    font-family: -apple-system, BlinkMacSystemFont;
 }
 html{
     margin: 0;
