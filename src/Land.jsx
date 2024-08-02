@@ -60,7 +60,7 @@ function Land() {
                             <h2>i create things on web.</h2>
                             <br />
                             <p>
-                                currently studying computer science engineering at <br /> <a href="https://svu.edu.in/" target='_blank'>sri venkateshwara university</a> <br />
+                                currently studying computer science engineering at <br /> <a href="https://svuniversity.edu.in/"target='_blank'>sri venkateshwara university</a> <br />
                                 this is my journey to become a fully fledged Engineer.
                             </p>
                             <br /><br /><br />
