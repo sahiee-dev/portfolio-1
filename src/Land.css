@@ -212,6 +212,10 @@ section#about {
 .hidden{
     display: none;
 }
+.darkmode {
+    background-color: #222;
+    color: #fff;
+}
 .slide-left {
     align-self: flex-start; /* Align to the left */
     background: linear-gradient(to right, #fff, #bcbcbc, #6d6d6d, #1b1b1b, #000000);
