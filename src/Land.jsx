@@ -51,7 +51,10 @@ function Land() {
                             <a href="mailto:sahir150305@gmail.com" target="_blank" rel="noopener noreferrer">
                                 <button><FontAwesomeIcon icon={['fas', 'envelope']} /></button>
                             </a>
-                            <button id='switchmode' onClick={toggleDarkMode}><FontAwesomeIcon icon={['fas', 'moon']} /></button>
+                            <a href="mailto:sahir150305@gmail.com" target="_blank" rel="noopener noreferrer">
+                                <button><FontAwesomeIcon icon={['fas', 'envelope']} /></button>
+                            </a>
+                           
                         </div>
                     </div>
 
