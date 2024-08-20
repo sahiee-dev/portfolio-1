@@ -8,7 +8,7 @@
 
 
 body.darkmode {
-    --bg-color: white;
+    --bg-color: #f3f4e5;
     --text-color: black;
 }
 body.darkmode .icons button {
