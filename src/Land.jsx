@@ -1,75 +1,83 @@
 import img from './assets/img.png';
 import vox from './assets/vox.png';
-import qwerty from './assets/qwerty.png'
-import cringe from './assets/cringe.png'
-import temp from './assets/temp.png'
+import qwerty from './assets/qwerty.png';
+import cringe from './assets/cringe.png';
+import temp from './assets/temp.png';
 import './Land.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './fontawsome';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 
 function Land() {
 
     useEffect(() => {
         AOS.init({
             duration: 1200,
-        })
-    },[]);
+        });
+    }, []);
+
+    const toggleDarkMode = () => {
+        const mode = document.getElementById('switchmode');
+        mode.classList.toggle('darkmode');
+    };
 
     return (
         <>
             <main>
                 <section id="home">
                     <header>
-                        
                         <nav>
                             <ul>
-                                <a href="#"><li>Home</li></a>
-                                <a href="#about"><li>About</li></a>
-                                <a href="#projects"><li>Projects</li></a>
-                                <a href="#contact"><li>Contact</li></a>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#about">About</a></li>
+                                <li><a href="#projects">Projects</a></li>
+                                <li><a href="#contact">Contact</a></li>
                             </ul>
                         </nav>
                     </header>
 
-                    <div className="icons" >
-                            <div className="left-side-icons">
+                    <div className="icons">
+                        <div className="left-side-icons">
                             <a href="https://github.com/sahiee-dev" target="_blank" rel="noopener noreferrer">
                                 <button><FontAwesomeIcon icon={['fab', 'github']} /></button>
                             </a>
                             <a href="https://www.linkedin.com/in/shaik-ahamed-sahir-672562253/" target="_blank" rel="noopener noreferrer">
                                 <button><FontAwesomeIcon icon={['fab', 'linkedin']} /></button>
                             </a>
-                            </div>
-                            <div className="right-side-icons">
-                                <a href="mailto:sahir150305@gmail.com" target="_blank" rel="noopener noreferrer">
-                            <button><FontAwesomeIcon icon={['fas', 'envelope']} /></button>
-                                </a>
-                            </div>
-                </div>
-
-                
+                        </div>
+                        <div className="right-side-icons">
+                            <a href="mailto:sahir150305@gmail.com" target="_blank" rel="noopener noreferrer">
+                                <button><FontAwesomeIcon icon={['fas', 'envelope']} /></button>
+                            </a>
+                            <button id='switchmode' onClick={toggleDarkMode}><FontAwesomeIcon icon={['fas', 'moon']} /></button>
+                        </div>
+                    </div>
 
                     <div className="container">
                         <div className="left-container" data-aos="fade-right">
                             <h2>Hey there, I am</h2>
                             <br />
                             <h1><span>Sahir</span></h1>
-                            <h2>i create things on web.</h2>
+                            <h2>I create things on the web.</h2>
                             <br />
                             <p>
-                                currently studying computer science engineering at <br /> <a href="https://svuniversity.edu.in/"target='_blank'>sri venkateshwara university</a> <br />
-                                this is my journey to become a fully fledged Engineer.
+                                Currently studying computer science engineering at <br /> 
+                                <a href="https://svuniversity.edu.in/" target='_blank'>Sri Venkateshwara University</a> <br />
+                                This is my journey to become a fully-fledged engineer.
                             </p>
                             <br /><br /><br />
-                            <a href="https://github.com/sahiee-dev/portfolio" target='_blank'><button className='web-code-btn'>View Website Code</button></a>
-                            <p className='small-txt'>Need a website as cool as this one? shoot me an <a href="mailto:sahir150305@gmail.com">email</a></p>
+                            <a href="https://github.com/sahiee-dev/portfolio" target='_blank'>
+                                <button className='web-code-btn'>View Website Code</button>
+                            </a>
+                            <p className='small-txt'>
+                                Need a website as cool as this one? Shoot me an <a href="mailto:sahir150305@gmail.com">email</a>
+                            </p>
                         </div>
                         <div className="right-container" data-aos="fade-left">
                             <div className="img-container">
-                                <img className='image' src={img} />
+                                <img className='image' src={img} alt="Profile" />
                             </div>
                         </div>
                     </div>
