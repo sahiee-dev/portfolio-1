@@ -304,11 +304,11 @@ section#about {
 }
 .left-contact p, .right-contact p {
     background: none; 
-    color: #fff;
+    color:  var(--text-color);
 }
 .left-contact a, .right-contact a {
     background: none; 
-    color: #fff;
+    color:  var(--text-color);
 }
 #contact p{
     text-align: center;
@@ -384,6 +384,7 @@ section#about {
     }
     #contact{
         margin-top: 150px;
+        color:  var(--text-color);
     }
 
 }
