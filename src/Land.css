@@ -10,10 +10,6 @@
     font-family:  "Space Grotesk","montserrat";
     font-weight: 500;
 }
-html{
-    margin: 0;
-    padding: 0;
-}
 nav {
     display: flex;
     justify-content: center;
