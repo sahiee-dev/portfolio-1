@@ -19,7 +19,7 @@ function Land() {
     }, []);
 
     const toggleDarkMode = () => {
-        const mode = document.getElementById('switchmode');
+        const mode = document.body;
         mode.classList.toggle('darkmode');
     };
 
