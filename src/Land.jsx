@@ -164,6 +164,8 @@ function Land() {
                             <p>I enjoy working with dedicated creatives from <br /> places around the world.</p>
                             <br />
                             <p>we can do much together.</p>
+                            <br/>
+                            <p>🤍</p>
                         </div>
                         <div className="right-contact" data-aos="fade-right">
                             <a href="mailto:sahir150305@gmail.com"><FontAwesomeIcon icon="fa-solid fa-envelope" /> sahir150305@gmail.com</a>
