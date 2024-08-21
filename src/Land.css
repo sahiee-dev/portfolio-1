@@ -47,6 +47,8 @@ nav a{
     font-size: 22px;
     border: none;
     cursor: pointer;
+    z-index: 2;
+    right: 20px;
 }
 hr{
     box-sizing: 0 0 10px 0.01px #e4e4e4;
