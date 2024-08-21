@@ -80,7 +80,9 @@ li {
     z-index: 2;
     background: none;
 }
-
+.left-side-icons a, .right-side-icons a{
+    background-color: none;
+}
 .icons button {
     padding: 14px;
     font-size: 24px;
