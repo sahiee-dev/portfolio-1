@@ -67,6 +67,7 @@ li {
     transform: translateY(-50%);
     z-index: 2;
     border-radius: 50%;
+    background: none;
 }
 
 .right-side-icons {
@@ -77,6 +78,7 @@ li {
     flex-direction: column;
     transform: translateY(-50%);
     z-index: 2;
+    background: none;
 }
 
 .icons button {
@@ -85,6 +87,7 @@ li {
     border: none;
     cursor: pointer;
     transition: 0.5s;
+    background: none;
 }
 
 .icons button:hover {
