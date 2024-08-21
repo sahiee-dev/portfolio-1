@@ -42,6 +42,12 @@ nav a{
     right: 0;
     margin: 10px 20px;
 }
+.modebutton{
+    padding: 14px;
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+}
 hr{
     box-sizing: 0 0 10px 0.01px #e4e4e4;
 }
