@@ -52,7 +52,7 @@ function Land() {
                                 <button><FontAwesomeIcon icon={['fas', 'envelope']} /></button>
                             </a>
                             <a>
-                                <button id='switchmode' onClick={toggleDarkMode}><FontAwesomeIcon icon={['fas', 'Moon']} /></button>
+                                <button id='switchmode' onClick={toggleDarkMode}><FontAwesomeIcon icon={['fas', 'moon']} /></button>
                             </a>
                            
                         </div>
