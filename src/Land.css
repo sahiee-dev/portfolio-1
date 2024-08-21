@@ -245,7 +245,7 @@ section#about {
 }
 .slide-left {
     align-self: flex-start; /* Align to the left */
-    background: linear-gradient(to right, #fff, #bcbcbc, #6d6d6d, #1b1b1b, #000000);
+    background: linear-gradient(to right, #f3f4e5, #bcbcbc, #6d6d6d, #1b1b1b, #000000);
     padding: 20px; /* Add padding for spacing */
     box-sizing: border-box; /* Include padding in element's total width and height */
     overflow: hidden; /* Hide any overflowing content */
@@ -254,7 +254,7 @@ section#about {
 
 .slide-right {
     align-self: flex-end; /* Align to the right */
-    background: linear-gradient(to left, #fff, #8f8f8f, #555555, #1b1b1b, #000000);
+    background: linear-gradient(to left, #f3f4e5, #8f8f8f, #555555, #1b1b1b, #000000);
     padding: 20px; /* Add padding for spacing */
     box-sizing: border-box; /* Include padding in element's total width and height */
     overflow: hidden; /* Hide any overflowing content */
