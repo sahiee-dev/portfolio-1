@@ -35,6 +35,9 @@ function Land() {
                                 <li><a href="#projects">Projects</a></li>
                                 <li><a href="#contact">Contact</a></li>
                             </ul>
+                            <a>
+                                <button id='switchmode' onClick={toggleDarkMode}><FontAwesomeIcon icon={['fas', 'moon']} /></button>
+                            </a>
                         </nav>
                     </header>
 
@@ -51,9 +54,7 @@ function Land() {
                             <a href="mailto:sahir150305@gmail.com" target="_blank" rel="noopener noreferrer">
                                 <button><FontAwesomeIcon icon={['fas', 'envelope']} /></button>
                             </a>
-                            <a>
-                                <button id='switchmode' onClick={toggleDarkMode}><FontAwesomeIcon icon={['fas', 'moon']} /></button>
-                            </a>
+                            
                            
                         </div>
                     </div>
