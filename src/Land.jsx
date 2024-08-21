@@ -36,7 +36,7 @@ function Land() {
                                 <li><a href="#contact">Contact</a></li>
                             </ul>
                             <a>
-                                <button id='switchmode' onClick={toggleDarkMode}><FontAwesomeIcon icon={['fas', 'moon']} /></button>
+                                <button className="modebutton" id='switchmode' onClick={toggleDarkMode}><FontAwesomeIcon icon={['fas', 'moon']} /></button>
                             </a>
                         </nav>
                     </header>
