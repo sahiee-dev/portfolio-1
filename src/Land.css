@@ -38,6 +38,10 @@ nav {
     box-shadow: 0 0 10px 0.01px #e4e4e4;
     z-index: 2;
 }
+nav a{
+    right: 0;
+    margin: 10px 20px;
+}
 hr{
     box-sizing: 0 0 10px 0.01px #e4e4e4;
 }
