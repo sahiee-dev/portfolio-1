@@ -288,18 +288,21 @@ section#about {
     width: 100%;
     margin-top: 100px;
 }
-.tech .tech-title{
+.tech .tech-title {
     font-size: 130px;
     font-weight: 900;
     text-align: center;
     font-family: 'Zen Dots';
 }
-.tech .fa-icon{
+
+.tech .fa-icon {
     font-size: 70px;
     margin: 30px;
+    transition: transform 0.8s easein; /* Adjust the duration and easing function as needed */
 }
-.tech .fa-icon:hover{
-    scale: 1.1x;
+
+.tech .fa-icon:hover {
+    transform: scale(1.1);
 }
 .contact{
     display: flex;
