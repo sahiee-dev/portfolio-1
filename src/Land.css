@@ -298,6 +298,9 @@ section#about {
     font-size: 70px;
     margin: 30px;
 }
+.tech .fa-icon:hover{
+    scale: 1.1x;
+}
 .contact{
     display: flex;
     align-items: center;
