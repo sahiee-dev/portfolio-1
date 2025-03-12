@@ -462,6 +462,9 @@ section#about {
     #contact{
         margin-top: 250px;
     }
+    ul{
+        display: none;
+    }
 
 }
 
@@ -479,6 +482,7 @@ section#about {
     }
     ul {
         flex-direction: column;
+        display: none;
     }
     li {
         margin: 10px 0;
