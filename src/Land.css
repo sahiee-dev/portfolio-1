@@ -27,12 +27,28 @@ html, body {
     max-width: 100%;
     overflow-x: hidden;
     scroll-behavior: smooth;
+    font-family: -apple-system;
+}
+html{
+    margin: 0;
+    padding: 0;
+}
+.lanyard{
+    z-index: 20;
+    position: fixed;
+    right: 50px;
+    top: 80px;
+    transition: opacity 0.5s, transform 0.5s;
+}
+.lanyard-hidden {
+    opacity: 0;
+    transform: translateY(-20px);
+    pointer-events: none;
 }
 nav {
     display: flex;
     justify-content: center;
-    position: fixed;
-    top: 0;
+    position: relative; /* Changed from fixed to relative */
     width: 100%;
     height: 10vh;
     box-shadow: 0 0 10px 0.01px #e4e4e4;
@@ -59,6 +75,15 @@ ul {
 }
 ul button{
     display: none;
+}
+
+.menu-icon{
+    font-size: 30px;
+    text-align: center;
+    margin: 10px;
+    cursor: pointer;
+    background: none;
+    color: white;
 }
 
 ul a {
@@ -108,19 +133,19 @@ li {
     font-size: 30px;
 }
 
+
 .container {
-    margin-top: 10vh;
-    height: 90vh;
-    width: 100vw;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    margin: 0px !important;
 }
 
 h1 {
     font-size: 100px;
     font-weight: bolder;
     letter-spacing: 3px;
+    z-index: 10; /* Added z-index for header */
 }
 
 h1 span {
@@ -133,6 +158,19 @@ h1 span {
 
 p {
     font-size: 18px;
+}
+.touch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: none;
+    padding: 0;
+}
+.heading{
+    z-index: 10;
+    position: relative;
+
 }
 
 .web-code-btn {
@@ -160,6 +198,14 @@ p {
     height: 300px;
     transition: 0.5s;
 }
+#about{
+    z-index: 10;
+    position: relative;
+}
+#contact{
+    z-index: 10;
+    position: relative;
+}
 
 .image:hover {
     box-shadow: 0 0 10px 1px #fff;
@@ -169,6 +215,8 @@ p {
     text-align: center;
     font-size: 80px;
     letter-spacing: normal;
+    margin: 5vh 0;
+    z-index: 10; /* Added z-index for header */
 }
 
 .project-cont {
@@ -177,6 +225,7 @@ p {
     align-items: center;
     justify-content: center;
     transition: 0.5s;
+    margin: 5vh 0;
 }
 
 .cont-single {
@@ -191,11 +240,12 @@ p {
     text-align: center;
     box-shadow: 0 0 30px 0.01px #b2b2b2;
     padding: 15px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     transition: 0.5s;
 }
 .cont-single h1 {
     font-size: 60px;
+    z-index: 10; /* Added z-index for header */
 }
 
 .cont-single a {
@@ -230,6 +280,7 @@ section#about {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    margin: 10vh 0;
 }
 
 .slide-left, .slide-right {
@@ -274,6 +325,7 @@ section#about {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    z-index: 10; /* Added z-index for header */
 }
 .slide-right h2{
     font-size: 287px;
@@ -283,16 +335,11 @@ section#about {
     background-clip: text;
     -webkit-text-fill-color: transparent;
     text-align: center;
+    z-index: 10; /* Added z-index for header */
 }
 .tech{
     width: 100%;
-    margin-top: 100px;
-}
-.tech .tech-title {
-    font-size: 130px;
-    font-weight: 900;
-    text-align: center;
-    font-family: 'Zen Dots';
+    margin: 15vh 0;
 }
 
 .tech .fa-icon {
@@ -310,10 +357,13 @@ section#about {
     flex-direction: column;
     justify-content: space-around;
     height: 70vh;
+    margin: 0px 10vh;
 }
 #contact h1{
     text-align: center;
-    
+    margin-top: 50px;
+    margin-bottom: 0px;
+    z-index: 10; /* Added z-index for header */
 }
 
 .left-contact, .right-contact {
@@ -347,6 +397,7 @@ section#about {
     nav {
         flex-direction: column;
         height: auto;
+        position: relative; /* Ensure nav is relative for smaller screens */
     }
     ul {
         flex-direction: column;
@@ -363,6 +414,7 @@ section#about {
         height: auto;
         justify-content: center;
         align-items: center;
+        margin: 10vh 0;
     }
     h1 span{
         font-size: 120px;
@@ -390,6 +442,7 @@ section#about {
     }
     .cont-single h1{
         font-size: 40px;
+        z-index: 10; /* Added z-index for header */
     }
     .project-img {
         width: 80%;
@@ -400,14 +453,14 @@ section#about {
     }
     .slide-left h2, .slide-right h2{
         font-size: 40px;
+        z-index: 10; /* Added z-index for header */
     }
     .tech .fa-icon{
         font-size: 50px;
         margin: 30px;
     }
     #contact{
-        margin-top: 150px;
-        color:  var(--text-color);
+        margin-top: 250px;
     }
 
 }
@@ -422,6 +475,7 @@ section#about {
     nav {
         flex-direction: column;
         height: auto;
+        position: relative; /* Ensure nav is relative for smaller screens */
     }
     ul {
         flex-direction: column;
@@ -433,9 +487,11 @@ section#about {
     .container {
         flex-direction: column;
         height: auto;
+        margin: 5vh 0;
     }
     h1 {
         font-size: 40px;
+        z-index: 10; /* Added z-index for header */
     }
     .left-side-icons, .right-side-icons {
         top: auto;
@@ -456,6 +512,7 @@ section#about {
     }
     .cont-single h1{
         font-size: 40px;
+        z-index: 10; /* Added z-index for header */
     }
     .project-img {
         width: 100%;
