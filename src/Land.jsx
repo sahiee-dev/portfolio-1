@@ -1,7 +1,7 @@
 import img from './assets/img.png';
 import vox from './assets/vox.jpg';
-import insta from './assets/insta.png';
-import typing from './assets/typing.jpg'
+import Secure_devsecops from './assets/Secure_devsecops.png';
+import Docker from './assets/Docker.png'
 import sapt from './assets/sapt.jpg';
 import pyth from './assets/pyth.jpg'
 import './Land.css';
@@ -227,7 +227,7 @@ function Land() {
                                             title: 'insta',
                                             description: 'Instagram video downloader',
                                             link: 'https://github.com/sahiee-dev/instagram-downloader',
-                                            image: insta
+                                            image: Secure_devsecops
                                         },
                                         {
                                             title: 'Endpoint detection',
@@ -250,7 +250,7 @@ function Land() {
                                             title: 'typing test',
                                             description: 'Typing speed testing app',
                                             link: 'https://qwertyquest.netlify.app',
-                                            image: typing
+                                            image: Docker
                                         }
                                     ]}
                                     speed={30}
