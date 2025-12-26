@@ -1,0 +1,42 @@
+/* === MOBILE VIEWPORT FIX === */
+/* Only apply strict width constraints on mobile devices */
+@media (max-width: 768px) {
+    html {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden !important;
+        overscroll-behavior-x: none;
+    }
+
+    body {
+        width: 100%;
+        max-width: 100%;
+        min-height: 100vh;
+        min-height: -webkit-fill-available;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden !important;
+        overscroll-behavior-x: none;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    #root {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden !important;
+        min-height: 100vh;
+        min-height: -webkit-fill-available;
+    }
+
+    /* Prevent any element from causing horizontal scroll */
+    .content-layer,
+    .glass-section,
+    .section-card,
+    main {
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
+}

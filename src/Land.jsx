@@ -158,6 +158,24 @@ function Land() {
                                         Get in Touch
                                     </motion.a>
                                 </motion.div>
+
+                                {/* Mobile-only Scroll Down Indicator */}
+                                <motion.a
+                                    href="#about"
+                                    className="scroll-down-indicator"
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
+                                    transition={{ duration: 0.6, delay: 1.5 }}
+                                >
+                                    <div className="scroll-arrow-wrapper">
+                                        <div className="scroll-arrow-line"></div>
+                                        <div className="scroll-arrow-chevron">
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                    <span className="scroll-text">Scroll</span>
+                                </motion.a>
                             </div>
 
                             <motion.div
