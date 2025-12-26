@@ -1,5 +1,7 @@
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faBars, faPhone, faEnvelope, faDatabase, faC, faMoon } from '@fortawesome/free-solid-svg-icons'; 
-import { faGithub, faLinkedin, faReact, faNode, faJs, faPython, faHtml5, faCss3Alt, faGitAlt } from '@fortawesome/free-brands-svg-icons';
+// Only import icons actually used in the UI
+import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
-library.add(faBars, faGithub, faLinkedin, faEnvelope, faReact, faNode, faJs, faPython, faC, faDatabase, faHtml5, faCss3Alt, faGitAlt, faPhone, faMoon);
+// Add only the icons we need
+library.add(faGithub, faLinkedin, faEnvelope, faPhone);

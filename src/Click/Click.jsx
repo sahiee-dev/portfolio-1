@@ -13,7 +13,8 @@ const ClickSpark = ({
 }) => {
     const canvasRef = useRef(null);
     const sparksRef = useRef([]);
-    const startTimeRef = useRef(null);
+    const animationIdRef = useRef(null);
+    const isAnimatingRef = useRef(false);
 
     useEffect(() => {
         const canvas = canvasRef.current;
@@ -64,17 +65,16 @@ const ClickSpark = ({
         [easing]
     );
 
-    useEffect(() => {
+    // Animation loop that only runs when there are sparks
+    const startAnimation = useCallback(() => {
+        if (isAnimatingRef.current) return;
+        isAnimatingRef.current = true;
+
         const canvas = canvasRef.current;
         if (!canvas) return;
         const ctx = canvas.getContext("2d");
 
-        let animationId;
-
         const draw = (timestamp) => {
-            if (!startTimeRef.current) {
-                startTimeRef.current = timestamp;
-            }
             ctx.clearRect(0, 0, canvas.width, canvas.height);
 
             sparksRef.current = sparksRef.current.filter((spark) => {
@@ -104,25 +104,28 @@ const ClickSpark = ({
                 return true;
             });
 
-            animationId = requestAnimationFrame(draw);
+            // Only continue if there are still sparks
+            if (sparksRef.current.length > 0) {
+                animationIdRef.current = requestAnimationFrame(draw);
+            } else {
+                isAnimatingRef.current = false;
+                animationIdRef.current = null;
+            }
         };
 
-        animationId = requestAnimationFrame(draw);
+        animationIdRef.current = requestAnimationFrame(draw);
+    }, [sparkColor, sparkSize, sparkRadius, duration, easeFunc, extraScale]);
 
+    // Cleanup on unmount
+    useEffect(() => {
         return () => {
-            cancelAnimationFrame(animationId);
+            if (animationIdRef.current) {
+                cancelAnimationFrame(animationIdRef.current);
+            }
         };
-    }, [
-        sparkColor,
-        sparkSize,
-        sparkRadius,
-        sparkCount,
-        duration,
-        easeFunc,
-        extraScale,
-    ]);
+    }, []);
 
-    const handleClick = (e) => {
+    const handleClick = useCallback((e) => {
         const canvas = canvasRef.current;
         if (!canvas) return;
         const rect = canvas.getBoundingClientRect();
@@ -138,7 +141,9 @@ const ClickSpark = ({
         }));
 
         sparksRef.current.push(...newSparks);
-    };
+        // Start animation only when needed
+        startAnimation();
+    }, [sparkCount, startAnimation]);
 
     return (
         <div
