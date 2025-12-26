@@ -141,7 +141,7 @@ function Land() {
                                     transition={{ duration: 0.6, delay: 1.0 }}
                                 >
                                     <motion.a
-                                        href="https://github.com/sahiee-dev/portfolio"
+                                        href="https://github.com/sahiee-dev/portfolio-1"
                                         target="_blank"
                                         className="btn-glass"
                                         whileHover={{ scale: 1.05 }}
