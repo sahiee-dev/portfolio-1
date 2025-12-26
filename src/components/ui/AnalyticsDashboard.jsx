@@ -1,6 +1,8 @@
 /* eslint-disable react/prop-types */
+import { useState } from "react"
 import { motion } from "framer-motion"
 import { AnimatedGradient } from "./AnimatedGradient"
+import endorsementGif from "/Gif2.gif"
 
 /**
  * BentoCard - Animated gradient card for analytics display
@@ -98,6 +100,159 @@ export function BentoCard({ title, value, subtitle, colors, delay = 0 }) {
 }
 
 /**
+ * EndorsementCard - Special card with hover GIF overlay
+ */
+export function EndorsementCard({ title, value, subtitle, colors, delay = 0 }) {
+    const [showGif, setShowGif] = useState(false)
+
+    const container = {
+        hidden: { opacity: 0 },
+        show: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.1,
+                delayChildren: delay + 0.3,
+            },
+        },
+    }
+
+    const item = {
+        hidden: { opacity: 0, y: 10 },
+        show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+    }
+
+    return (
+        <motion.div
+            style={{
+                position: 'relative',
+                overflow: 'hidden',
+                height: '100%',
+                minHeight: '180px',
+                background: 'rgba(0, 0, 0, 0.3)',
+                borderRadius: '20px',
+                border: '1px solid rgba(255, 255, 255, 0.08)',
+                cursor: 'pointer'
+            }}
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay }}
+            onMouseEnter={() => setShowGif(true)}
+            onMouseLeave={() => setShowGif(false)}
+        >
+            <AnimatedGradient colors={colors} speed={0.02} blur="medium" />
+            <motion.div
+                style={{
+                    position: 'relative',
+                    zIndex: 10,
+                    padding: '1.5rem',
+                    backdropFilter: 'blur(10px)',
+                    WebkitBackdropFilter: 'blur(10px)',
+                    height: '100%',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'center'
+                }}
+                variants={container}
+                initial="hidden"
+                animate="show"
+            >
+                <motion.h3
+                    style={{
+                        fontSize: '0.875rem',
+                        fontWeight: 500,
+                        color: 'rgba(255, 255, 255, 0.7)',
+                        marginBottom: '0.5rem',
+                        textTransform: 'uppercase',
+                        letterSpacing: '0.05em'
+                    }}
+                    variants={item}
+                >
+                    {title}
+                </motion.h3>
+                <motion.p
+                    style={{
+                        fontSize: 'clamp(2rem, 5vw, 3.5rem)',
+                        fontWeight: 700,
+                        color: '#ffffff',
+                        marginBottom: '0.75rem',
+                        fontFamily: 'Outfit, sans-serif',
+                        lineHeight: 1
+                    }}
+                    variants={item}
+                >
+                    {value}
+                </motion.p>
+                {subtitle && (
+                    <motion.p
+                        style={{
+                            fontSize: '0.875rem',
+                            color: 'rgba(255, 255, 255, 0.6)',
+                            lineHeight: 1.4
+                        }}
+                        variants={item}
+                    >
+                        {subtitle}
+                    </motion.p>
+                )}
+            </motion.div>
+
+            {/* GIF Overlay on Hover */}
+            <motion.div
+                style={{
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    right: 0,
+                    bottom: 0,
+                    background: 'rgba(0, 0, 0, 0.9)',
+                    backdropFilter: 'blur(8px)',
+                    WebkitBackdropFilter: 'blur(8px)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    zIndex: 50,
+                    borderRadius: '20px',
+                    pointerEvents: showGif ? 'auto' : 'none'
+                }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: showGif ? 1 : 0 }}
+                transition={{ duration: 0.3 }}
+            >
+                <div style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    gap: '1rem',
+                    padding: '1.5rem'
+                }}>
+                    <img
+                        src={endorsementGif}
+                        alt="Endorsement"
+                        style={{
+                            maxWidth: '200px',
+                            width: '100%',
+                            height: 'auto',
+                            borderRadius: '12px',
+                            boxShadow: '0 20px 60px rgba(236, 72, 153, 0.3)'
+                        }}
+                    />
+                    <p style={{
+                        fontFamily: 'Outfit, sans-serif',
+                        fontSize: '1.25rem',
+                        fontWeight: 600,
+                        color: '#ffffff',
+                        margin: 0,
+                        textAlign: 'center'
+                    }}>
+                        Thanks for checking! 🙌
+                    </p>
+                </div>
+            </motion.div>
+        </motion.div>
+    )
+}
+
+/**
  * AnalyticsDashboard - Portfolio metrics bento grid
  */
 export function AnalyticsDashboard() {
@@ -146,9 +301,9 @@ export function AnalyticsDashboard() {
                     />
                 </div>
 
-                {/* Row 3: Full width */}
+                {/* Row 3: Full width - Endorsement with GIF overlay */}
                 <div className="analytics-card-full">
-                    <BentoCard
+                    <EndorsementCard
                         title="Endorsements & Recognition"
                         value="4.67/5"
                         subtitle="Based on LinkedIn endorsements, GitHub stars, and teammate feedback from hackathons"
