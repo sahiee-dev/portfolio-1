@@ -13,7 +13,7 @@ import FullPageShader, { GlassCard } from './components/ui/hero';
 // Lazy load AnalyticsDashboard
 const AnalyticsDashboard = lazy(() => import('./components/ui/AnalyticsDashboard').then(module => ({ default: module.AnalyticsDashboard })));
 import { motion } from 'framer-motion';
-import { TechCarousel, HTMLIcon, CSSIcon, ReactIcon, NodeIcon, JSIcon, PythonIcon, GitIcon, FigmaIcon } from './components/TechCarousel';
+import { TechCarousel, HTMLIcon, CSSIcon, ReactIcon, NodeIcon, JSIcon, PythonIcon, GitIcon, FigmaIcon, CIcon, CPPIcon, ExpressIcon, NextIcon, FlaskIcon, TailwindIcon, MySQLIcon, MongoDBIcon, SQLiteIcon, AWSIcon } from './components/TechCarousel';
 
 function Land() {
     useEffect(() => {
@@ -224,16 +224,26 @@ function Land() {
                                 <h3 className="tech-title">Tech Stack</h3>
                                 <TechCarousel
                                     logos={[
+                                        { name: 'Python', icon: PythonIcon },
+                                        { name: 'JavaScript', icon: JSIcon },
+                                        { name: 'C', icon: CIcon },
+                                        { name: 'C++', icon: CPPIcon },
+                                        { name: 'React', icon: ReactIcon },
+                                        { name: 'Node.js', icon: NodeIcon },
+                                        { name: 'Express.js', icon: ExpressIcon },
+                                        { name: 'Next.js', icon: NextIcon },
+                                        { name: 'Flask', icon: FlaskIcon },
+                                        { name: 'TailwindCSS', icon: TailwindIcon },
+                                        { name: 'MySQL', icon: MySQLIcon },
+                                        { name: 'MongoDB', icon: MongoDBIcon },
+                                        { name: 'SQLite', icon: SQLiteIcon },
+                                        { name: 'AWS', icon: AWSIcon },
                                         { name: 'HTML5', icon: HTMLIcon },
                                         { name: 'CSS3', icon: CSSIcon },
-                                        { name: 'React', icon: ReactIcon },
-                                        { name: 'Node', icon: NodeIcon },
-                                        { name: 'JavaScript', icon: JSIcon },
-                                        { name: 'Python', icon: PythonIcon },
                                         { name: 'Git', icon: GitIcon },
                                         { name: 'Figma', icon: FigmaIcon },
                                     ]}
-                                    speed={30}
+                                    speed={50}
                                 />
                             </div>
                         </GlassCard>

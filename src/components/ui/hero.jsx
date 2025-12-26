@@ -87,7 +87,6 @@ export default function FullPageShader() {
                 }}
                 colors={["#000000", "#06b6d4", "#0891b2", "#164e63", "#f97316"]}
                 speed={0.2}
-                backgroundColor="#000000"
             />
         </div>
     )
