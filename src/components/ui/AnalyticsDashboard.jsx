@@ -139,7 +139,7 @@ export function AnalyticsDashboard() {
                 <div className="analytics-card-wide">
                     <BentoCard
                         title="Active GitHub Repos"
-                        value="15"
+                        value="22"
                         subtitle="Currently maintained projects"
                         colors={["#06b6d4", "#8b5cf6", "#f97316"]}
                         delay={0.8}
@@ -150,7 +150,7 @@ export function AnalyticsDashboard() {
                 <div className="analytics-card-full">
                     <BentoCard
                         title="Endorsements & Recognition"
-                        value="4.9/5"
+                        value="4.67/5"
                         subtitle="Based on LinkedIn endorsements, GitHub stars, and teammate feedback from hackathons"
                         colors={["#ec4899", "#f472b6", "#06b6d4"]}
                         delay={1}
